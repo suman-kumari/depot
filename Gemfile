@@ -43,3 +43,19 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'will_paginate', '>= 3.0.pre'
+
+group :development do
+  gem "letter_opener"
+  gem 'quiet_assets'
+end
+
+gem "paperclip", "~> 3.0"
+
+gem 'delayed_job_active_record'
+
+gem 'carmen-rails', '~> 1.0.0', github: 'jim/carmen-rails'
+
+
+

@@ -1,0 +1,4 @@
+class AddUserIdToAddress < ActiveRecord::Migration
+  def change
+  end
+end

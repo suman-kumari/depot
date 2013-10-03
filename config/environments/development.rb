@@ -1,4 +1,5 @@
 Depot::Application.configure do
+   config.action_mailer.delivery_method = :letter_opener
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -26,4 +27,10 @@ Depot::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-end
+  config.paperclip_defaults = {
+    :storage => :filesystem,
+    :path => ":rails_root/public/system/:attachment_singular/:id/:style/:filename",
+    :url => "/system/:attachment_singular/:id/:style/:filename"
+  }
+ end
+
